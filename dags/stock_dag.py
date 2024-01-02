@@ -26,6 +26,7 @@ def create_dataset(dataset, time_step=1):
 	return np.array(dataX), np.array(dataY)
 def train_model():
     df = get_data()
+    df = df.sort_values(by='time', ascending=True)
     df1=df.reset_index()['close']
     scaler=MinMaxScaler(feature_range=(0,1))
     df1=scaler.fit_transform(np.array(df1).reshape(-1,1))
