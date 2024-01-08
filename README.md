@@ -13,7 +13,7 @@ This project focuses on automating the process of collecting stock data and usin
 
 ## System Architecture
 
-![System Architecture](./image/stock-analyst.png)
+![System Architecture](./image/stock_analyst.png)
 
 ## Technologies
 
