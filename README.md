@@ -1,19 +1,45 @@
-# Dự án
-Tự động hóa quy trình thu thập và phân tích Dữ liệu Chứng khoán với Airow, PostgreSQL, Docker
-## Mô tả
-Dự án này tập trung vào việc tự động hóa quá trình thu thập dữ liệu chứng khoán và sử dụng dữ liệu đó để huấn luyện một mô hình học sâu. Mục tiêu là xây dựng một mô hình có thể dự đoán giá cổ phiếu trong tương lai dựa trên các thông tin thị trường có sẵn.
-## Workflow
-1. Crawl dữ liệu
+# Automated Process for Stock Data Collection and Analysis
 
-2. Insert dữ liệu vào cơ sở dữ liệu
+## Table of Contents
 
-4. Huấn luyện mô hình học sâu
+1. [Introduction](#introduction)
+2. [System Architecture](#system-architecture)
+3. [Technologies](#technologies)
+4. [Getting Started](#getting-started)
 
-5. Đánh giá và kiểm thử
+## Introduction
 
-6. Triển khai mô hình
+This project focuses on automating the process of collecting stock data and using that data to train a deep learning model. The goal is to build a model that can predict future stock prices based on available market information.
 
-## Cài đặt
-Bước 1: git clone https://github.com/dn-duongnam/stock-analyst.git
+## System Architecture
 
-Bước 2: docker-compose up
+![System Architecture](./image/stock-analyst.png)
+
+## Technologies
+
+- [Apache Airflow](https://airflow.apache.org/)
+- [Python](https://www.python.org/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Docker](https://www.docker.com/)
+
+## Getting Started
+
+1. **Clone the repository:**
+
+    ```bash
+    https://github.com/dn-duongnam/stock-analyst.git
+    ```
+
+2. **Navigate to the project directory:**
+
+    ```bash
+    cd stock-analyst
+    ```
+
+3. **Run Docker Compose to spin up the services:**
+
+    ```bash
+    docker-compose up
+    ```
+
+This will set up and start the necessary services for the project.
