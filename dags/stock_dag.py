@@ -12,9 +12,10 @@ from tensorflow.keras.layers import Dense
 from tensorflow.keras.layers import LSTM
 from vnstock import *
 def get_data():
-    engine = create_engine('postgresql://airflow:airflow@172.18.0.3:5432/stock_db')
+    engine = create_engine('postgresql://airflow:airflow@host.docker.internal:5432/stock_db')
     table_name = 'd1'
-    query = f'SELECT * FROM {table_name};'
+    ticker = "TCB"
+    query = f"SELECT * FROM {table_name} WHERE ticker = '{ticker}';"
     df = pd.read_sql(query, engine)
     return df
 def create_dataset(dataset, time_step=1):
@@ -67,7 +68,7 @@ with DAG(
         dag_id='train_model_stock_dag',
         default_args=default_args,
         description='Train model stock',
-        start_date=datetime(2023, 12, 23),
+        start_date=datetime(2024, 4, 23),
         schedule_interval='@daily',
         tags=['stock_data']
 ) as dag:
